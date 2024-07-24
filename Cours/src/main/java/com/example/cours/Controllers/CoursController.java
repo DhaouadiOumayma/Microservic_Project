@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/cours")
-public class ClubController {
+public class CoursController {
 
     @Autowired
     private CoursService clubService;
