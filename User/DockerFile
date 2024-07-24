@@ -1,0 +1,14 @@
+# Use AdoptOpenJDK 17 as the base image
+FROM adoptopenjdk/openjdk17:alpine-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the packaged Spring Boot application JAR file into the container at /app
+COPY target/User-0.0.1-SNAPSHOT.jar /app/User-0.0.1-SNAPSHOT.jar
+
+# Expose the port that the Spring Boot application uses (default is 8080)
+EXPOSE 8080
+
+# Specify the command to run the application
+CMD ["java", "-jar", "/app/User-0.0.1-SNAPSHOT.jar"]
